@@ -1,0 +1,53 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "brand":  { "$value": ["Barlow Semi Condensed", "Arial Narrow", "system-ui", "sans-serif"], "$description": "Principal / marca — títulos, UI, chamadas" },
+      "body":   { "$value": ["Open Sans", "-apple-system", "Segoe UI", "Roboto", "sans-serif"], "$description": "Web — corpo de texto em portais e sistemas" },
+      "doc":    { "$value": ["Calibri", "Carlito", "Segoe UI", "sans-serif"], "$description": "Documentos — texto corrido office/acadêmico" },
+      "promo":  { "$value": ["DIN", "Barlow Semi Condensed", "Oswald", "sans-serif"], "$description": "Divulgação — campanhas, papelaria, sinalização" },
+      "mono":   { "$value": ["ui-monospace", "SFMono-Regular", "Cascadia Code", "monospace"], "$description": "Dados / código" }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "light":    { "$value": 300 },
+      "regular":  { "$value": 400 },
+      "medium":   { "$value": 500 },
+      "semibold": { "$value": 600 },
+      "bold":     { "$value": 700 }
+    }
+  },
+  "scale": {
+    "$description": "Escala modular web — base 16px, razão 1.25 (Major Third). Valores em rem para respeitar zoom (WCAG 1.4.4).",
+    "size": {
+      "$type": "dimension",
+      "display":  { "$value": "3.815rem", "$description": "61px — hero/capa · lh 1.05 · ls -0.02em · bold" },
+      "h1":       { "$value": "3.052rem", "$description": "49px — título de página · lh 1.10 · bold" },
+      "h2":       { "$value": "2.441rem", "$description": "39px — seção · lh 1.15 · bold" },
+      "h3":       { "$value": "1.953rem", "$description": "31px — subseção · lh 1.20 · semibold" },
+      "h4":       { "$value": "1.563rem", "$description": "25px — bloco · lh 1.25 · semibold" },
+      "h5":       { "$value": "1.25rem",  "$description": "20px — rótulo forte · lh 1.30 · medium" },
+      "body-lg":  { "$value": "1.125rem", "$description": "18px — leitura confortável · lh 1.60" },
+      "body":     { "$value": "1rem",     "$description": "16px — corpo padrão · lh 1.60" },
+      "body-sm":  { "$value": "0.875rem", "$description": "14px — apoio · lh 1.55" },
+      "caption":  { "$value": "0.75rem",  "$description": "12px — legenda/metadados · lh 1.45 · medium" },
+      "overline": { "$value": "0.6875rem","$description": "11px — eyebrow · lh 1.40 · ls 0.08em · semibold caps" }
+    },
+    "line-height": {
+      "$type": "number",
+      "tight":   { "$value": 1.1 },
+      "snug":    { "$value": 1.25 },
+      "normal":  { "$value": 1.5 },
+      "relaxed": { "$value": 1.6 }
+    },
+    "letter-spacing": {
+      "$type": "dimension",
+      "tighter": { "$value": "-0.02em" },
+      "tight":   { "$value": "-0.01em" },
+      "normal":  { "$value": "0em" },
+      "wide":    { "$value": "0.02em" },
+      "wider":   { "$value": "0.08em" }
+    }
+  }
+}

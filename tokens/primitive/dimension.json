@@ -1,0 +1,59 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "space": {
+    "$type": "dimension",
+    "$description": "Escala de espaço base 4px/8px.",
+    "0":  { "$value": "0" },
+    "1":  { "$value": "4px",  "$description": "ícone↔label" },
+    "2":  { "$value": "8px",  "$description": "interno de chip" },
+    "3":  { "$value": "12px", "$description": "interno de campo" },
+    "4":  { "$value": "16px", "$description": "padding padrão" },
+    "5":  { "$value": "24px", "$description": "entre blocos" },
+    "6":  { "$value": "32px", "$description": "entre seções" },
+    "8":  { "$value": "48px", "$description": "margem de seção" },
+    "10": { "$value": "64px", "$description": "respiro de página" },
+    "12": { "$value": "96px", "$description": "hero / editorial" }
+  },
+  "radius": {
+    "$type": "dimension",
+    "sm":   { "$value": "4px" },
+    "md":   { "$value": "8px" },
+    "lg":   { "$value": "16px" },
+    "pill": { "$value": "999px" }
+  },
+  "breakpoint": {
+    "$type": "dimension",
+    "$description": "Grid responsivo — colunas: xs 4 / sm 8 / md-xl 12.",
+    "xs": { "$value": "0px" },
+    "sm": { "$value": "600px" },
+    "md": { "$value": "905px" },
+    "lg": { "$value": "1240px" },
+    "xl": { "$value": "1440px" }
+  },
+  "elevation": {
+    "$type": "shadow",
+    "1": { "$value": [
+      { "offsetX": "0", "offsetY": "1px", "blur": "2px", "spread": "0", "color": "rgba(18,41,42,0.08)" },
+      { "offsetX": "0", "offsetY": "1px", "blur": "3px", "spread": "0", "color": "rgba(18,41,42,0.06)" }
+    ] },
+    "2": { "$value": [
+      { "offsetX": "0", "offsetY": "4px", "blur": "8px", "spread": "0", "color": "rgba(18,41,42,0.10)" },
+      { "offsetX": "0", "offsetY": "2px", "blur": "4px", "spread": "0", "color": "rgba(18,41,42,0.06)" }
+    ] },
+    "3": { "$value": [
+      { "offsetX": "0", "offsetY": "12px", "blur": "24px", "spread": "0", "color": "rgba(18,41,42,0.12)" }
+    ] }
+  },
+  "motion": {
+    "duration": {
+      "$type": "duration",
+      "fast": { "$value": "120ms" },
+      "base": { "$value": "200ms" },
+      "slow": { "$value": "320ms" }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "standard": { "$value": [0.2, 0, 0, 1] }
+    }
+  }
+}

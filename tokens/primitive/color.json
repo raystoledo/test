@@ -1,0 +1,71 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "color": {
+    "$type": "color",
+    "brick": {
+      "$description": "Brick Fiocruz ramp — institutional red (tijolos do Castelo). Step 60 is the pure brand color, Pantone 1795 EC.",
+      "0":   { "$value": "#FFFFFF", "$description": "Rampa: branco de referência" },
+      "5":   { "$value": "#FEDED7", "$description": "Superfície/tag muito suave" },
+      "10":  { "$value": "#FABEB0", "$description": "Hover de superfície clara" },
+      "20":  { "$value": "#F39D8A", "$description": "Ilustração / estados suaves" },
+      "30":  { "$value": "#E87C66", "$description": "Accent de texto sobre fundo escuro (5.45:1 vs #12292A → AA)" },
+      "40":  { "$value": "#DB5A43", "$description": "Gráficos / data-viz" },
+      "60":  { "$value": "#CC3121", "$description": "MARCA / primária. Pantone 1795 EC · CMYK 14/94/100/4 · 5.21:1 vs branco (AA)" },
+      "70":  { "$value": "#A82C1D", "$description": "Hover/pressed da primária (6.90:1 vs branco)" },
+      "80":  { "$value": "#852719", "$description": "Texto de ênfase forte" },
+      "85":  { "$value": "#632015" },
+      "90":  { "$value": "#441911" },
+      "95":  { "$value": "#26110A", "$description": "Quase-preto quente" },
+      "100": { "$value": "#000000" }
+    },
+    "verde": {
+      "$description": "Verde Fiocruz ramp — institutional teal (vegetação da paisagem). Step 60 is the pure brand color, Pantone 322 EC.",
+      "0":   { "$value": "#FFFFFF" },
+      "5":   { "$value": "#DAE7E8", "$description": "Superfície informativa suave" },
+      "10":  { "$value": "#B5CFD1", "$description": "Bordas/divisores tema claro; texto secundário no dark (9.31:1)" },
+      "20":  { "$value": "#91B8BA", "$description": "Accent sobre fundo escuro (7.10:1 vs #12292A → AAA)" },
+      "30":  { "$value": "#6CA1A4", "$description": "Accent/borda ativa sobre fundo escuro (5.28:1 → AA)" },
+      "40":  { "$value": "#448A8F", "$description": "Data-viz" },
+      "60":  { "$value": "#00747A", "$description": "MARCA / secundária. Pantone 322 EC · CMYK 88/38/47/12 · 5.56:1 vs branco (AA)" },
+      "70":  { "$value": "#0E6065", "$description": "Texto/link AAA sobre branco (7.29:1)" },
+      "80":  { "$value": "#134D50", "$description": "Texto AAA sobre branco (9.52:1)" },
+      "85":  { "$value": "#143A3D", "$description": "Superfície escura elevada de marca" },
+      "90":  { "$value": "#12292A", "$description": "Dark surface base (15.26:1 vs branco)" },
+      "95":  { "$value": "#0D1819", "$description": "Dark surface profunda / Dark Core base" },
+      "100": { "$value": "#000000" }
+    },
+    "secondary": {
+      "$description": "18 cores secundárias — atmosfera cromática do Castelo e da paisagem. Uso: ilustração, data-viz categórica, campanhas. Não substituem a marca.",
+      "petrol":    { "$value": "#2C4D56" },
+      "olive":     { "$value": "#B2A567" },
+      "clay":      { "$value": "#9D7149" },
+      "amber":     { "$value": "#DC7612" },
+      "orange":    { "$value": "#FE8D19" },
+      "tangerine": { "$value": "#FE6520" },
+      "rust":      { "$value": "#BD3200" },
+      "brick-alt": { "$value": "#B33D32" },
+      "wine":      { "$value": "#742C38" },
+      "ink":       { "$value": "#000F34" },
+      "navy":      { "$value": "#193D62" },
+      "blue":      { "$value": "#005C8B" },
+      "cyan":      { "$value": "#0088BA" },
+      "teal":      { "$value": "#009294" },
+      "mint":      { "$value": "#6FC27F" },
+      "green":     { "$value": "#009D53" },
+      "emerald":   { "$value": "#28A079" },
+      "forest":    { "$value": "#006030" }
+    },
+    "support": {
+      "$description": "9 cores de apoio — neutros e utilitários.",
+      "sand":   { "$value": "#EDAC72", "$description": "Destaque quente suave" },
+      "teal":   { "$value": "#3E8087", "$description": "Apoio verde-azulado" },
+      "forest": { "$value": "#235343", "$description": "Apoio verde escuro" },
+      "black":  { "$value": "#000000" },
+      "ink":    { "$value": "#373435", "$description": "Cinza-tinta — texto forte (12.32:1 vs branco)" },
+      "gray":   { "$value": "#848688", "$description": "Cinza médio — UI/bordas (3.65:1; só ≥18px/UI)" },
+      "mist":   { "$value": "#BDC4BD", "$description": "Cinza-neblina — divisores" },
+      "cloud":  { "$value": "#E0DEDA", "$description": "Cinza-nuvem — superfície; texto dark (11.36:1)" },
+      "paper":  { "$value": "#FCECDE", "$description": "Papel/creme — fundo editorial quente" }
+    }
+  }
+}

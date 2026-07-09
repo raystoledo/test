@@ -1,0 +1,37 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "$description": "Camada semântica — MODO CLARO (padrão). Engenharia consome estes tokens, nunca os primitivos. Referências apontam para tokens/primitive/color.json.",
+  "color": {
+    "$type": "color",
+    "surface": {
+      "base":   { "$value": "{color.brick.0}",     "$description": "#FFFFFF" },
+      "subtle": { "$value": "{color.support.cloud}","$description": "#E0DEDA" },
+      "paper":  { "$value": "{color.support.paper}","$description": "#FCECDE — fundo editorial" },
+      "dark":   { "$value": "{color.verde.90}",     "$description": "#12292A — bloco escuro de destaque" }
+    },
+    "text": {
+      "primary":   { "$value": "{color.verde.90}",     "$description": "15.26:1 (AAA)" },
+      "secondary": { "$value": "{color.support.ink}",  "$description": "12.32:1 (AAA)" },
+      "muted":     { "$value": "{color.support.gray}", "$description": "3.65:1 — só ≥18.66px/700" },
+      "on-brand":  { "$value": "{color.brick.0}",      "$description": "#FFFFFF sobre superfície de marca" }
+    },
+    "brand": {
+      "primary":         { "$value": "{color.brick.60}", "$description": "5.21:1 vs branco (AA)" },
+      "primary-hover":   { "$value": "{color.brick.70}", "$description": "6.90:1" },
+      "secondary":       { "$value": "{color.verde.60}", "$description": "5.56:1 vs branco (AA)" },
+      "secondary-hover": { "$value": "{color.verde.70}", "$description": "7.29:1 (AAA)" }
+    },
+    "link":           { "$value": "{color.verde.70}",  "$description": "7.29:1 (AAA)" },
+    "border": {
+      "default": { "$value": "{color.support.mist}", "$description": "divisores (≥3:1 UI)" },
+      "strong":  { "$value": "{color.support.gray}" }
+    },
+    "focus-ring":     { "$value": "{color.verde.60}",  "$description": "anel de foco ≥3:1" },
+    "feedback": {
+      "success": { "$value": "{color.secondary.forest}", "$description": "#006030 · 7.73:1 (AAA)" },
+      "danger":  { "$value": "{color.brick.70}",         "$description": "#A82C1D · 6.90:1" },
+      "warning": { "$value": "{color.secondary.rust}",   "$description": "#BD3200 para texto; #DC7612 só ícone/fundo" },
+      "info":    { "$value": "{color.secondary.blue}",   "$description": "#005C8B · 7.23:1 (AAA)" }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "$description": "Camada semântica — MODO 'DARK CORE' premium. Base estrita preto/branco/cinza frio (rampa Verde 90/95). Cor institucional entra SÓ como accent (foco, seleção, borda ativa, nós de grafo) ocupando ≤10% da tela.",
+  "color": {
+    "$type": "color",
+    "surface": {
+      "base":   { "$value": "{color.verde.95}", "$description": "#0D1819 — quase-preto frio, 90% da tela" },
+      "subtle": { "$value": "{color.verde.90}", "$description": "#12292A — elevação" },
+      "paper":  { "$value": "{color.verde.90}" },
+      "dark":   { "$value": "{color.support.black}", "$description": "#000000 — poço" }
+    },
+    "text": {
+      "primary":   { "$value": "{color.support.cloud}", "$description": "#E0DEDA · 13.45:1 sobre base (AAA)" },
+      "secondary": { "$value": "{color.verde.10}",      "$description": "#B5CFD1" },
+      "muted":     { "$value": "{color.support.gray}",  "$description": "#848688" },
+      "on-brand":  { "$value": "{color.verde.95}" }
+    },
+    "brand": {
+      "primary":         { "$value": "{color.verde.30}", "$description": "#6CA1A4 — accent verde: borda ativa/seleção" },
+      "primary-hover":   { "$value": "{color.verde.20}", "$description": "#91B8BA" },
+      "secondary":       { "$value": "{color.brick.30}", "$description": "#E87C66 — destaque/alerta pontual" },
+      "secondary-hover": { "$value": "{color.brick.20}" }
+    },
+    "link":           { "$value": "{color.verde.20}",  "$description": "#91B8BA · 8.41:1 sobre base (AAA)" },
+    "border": {
+      "default": { "$value": "#20343A", "$description": "divisor neutro frio discreto" },
+      "strong":  { "$value": "{color.verde.30}", "$description": "borda ativa de accent" }
+    },
+    "focus-ring":     { "$value": "{color.verde.20}",  "$description": "#91B8BA anel 3px · 8.41:1" }
+  }
+}

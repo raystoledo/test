@@ -1,0 +1,37 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "$description": "Camada semântica — MODO ESCURO. Mesmos nomes de token do modo claro, valores remapeados. Cor de marca vermelha (brick.60) NUNCA como texto no escuro (2.93:1 reprova) — usar brick.30.",
+  "color": {
+    "$type": "color",
+    "surface": {
+      "base":   { "$value": "{color.verde.90}", "$description": "#12292A" },
+      "subtle": { "$value": "{color.verde.85}", "$description": "#143A3D — elevação +1" },
+      "paper":  { "$value": "{color.verde.85}", "$description": "superfície editorial escura" },
+      "dark":   { "$value": "{color.verde.95}", "$description": "#0D1819 — recuo/poço" }
+    },
+    "text": {
+      "primary":   { "$value": "{color.support.cloud}", "$description": "#E0DEDA · 11.36:1 (AAA)" },
+      "secondary": { "$value": "{color.verde.10}",      "$description": "#B5CFD1 · 9.31:1 (AAA)" },
+      "muted":     { "$value": "{color.verde.30}",      "$description": "#6CA1A4 · 5.28:1" },
+      "on-brand":  { "$value": "{color.verde.95}",      "$description": "texto escuro sobre accent claro" }
+    },
+    "brand": {
+      "primary":         { "$value": "{color.verde.20}", "$description": "#91B8BA · 7.10:1 (AAA) — accent claro" },
+      "primary-hover":   { "$value": "{color.verde.10}", "$description": "#B5CFD1" },
+      "secondary":       { "$value": "{color.brick.30}", "$description": "#E87C66 · 5.45:1 (AA) — accent quente" },
+      "secondary-hover": { "$value": "{color.brick.20}", "$description": "#F39D8A" }
+    },
+    "link":           { "$value": "{color.verde.20}",  "$description": "#91B8BA · 7.10:1 (AAA)" },
+    "border": {
+      "default": { "$value": "{color.verde.85}" },
+      "strong":  { "$value": "{color.verde.30}", "$description": "borda ativa #6CA1A4 · 5.28:1" }
+    },
+    "focus-ring":     { "$value": "{color.verde.30}",  "$description": "#6CA1A4 ≥3:1" },
+    "feedback": {
+      "success": { "$value": "{color.secondary.mint}",   "$description": "#6FC27F · 7.05:1 (AAA)" },
+      "danger":  { "$value": "{color.brick.30}",         "$description": "#E87C66 · 5.45:1" },
+      "warning": { "$value": "{color.secondary.orange}", "$description": "#FE8D19 · 6.57:1" },
+      "info":    { "$value": "{color.verde.30}",         "$description": "#6CA1A4 · 5.28:1" }
+    }
+  }
+}

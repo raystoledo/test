@@ -1,0 +1,36 @@
+{
+  "$comment": "Fiocruz 360° — build de tokens por modo. Rode uma vez por modo trocando o source semântico, ou use múltiplas plataformas com filtros. Exemplo base para modo claro.",
+  "source": [
+    "tokens/primitive/**/*.json",
+    "tokens/semantic/light.json"
+  ],
+  "platforms": {
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "build/css/",
+      "files": [
+        { "destination": "light.css", "format": "css/variables", "options": { "outputReferences": true, "selector": ":root" } }
+      ]
+    },
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "build/scss/",
+      "files": [{ "destination": "_tokens.scss", "format": "scss/variables" }]
+    },
+    "js": {
+      "transformGroup": "js",
+      "buildPath": "build/js/",
+      "files": [{ "destination": "tokens.ts", "format": "javascript/es6" }]
+    },
+    "ios": {
+      "transformGroup": "ios-swift",
+      "buildPath": "build/ios/",
+      "files": [{ "destination": "Tokens.swift", "format": "ios-swift/class.swift", "className": "FiocruzTokens" }]
+    },
+    "android": {
+      "transformGroup": "android",
+      "buildPath": "build/android/",
+      "files": [{ "destination": "tokens.xml", "format": "android/resources" }]
+    }
+  }
+}
