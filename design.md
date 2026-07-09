@@ -3,7 +3,9 @@
 > **Proposta técnica de Design System e Brand System multiplataforma para a Fundação Oswaldo Cruz.**
 > Otimização e expansão do *Manual de Uso da Marca Fiocruz* (v1.1 — Julho/2024) para os contextos Web, Digital, Redes Sociais e Impresso/Papelaria.
 >
-> **Versão do documento:** 1.0 · **Base normativa:** Manual de Marca Fiocruz v1.1 · **Tagline oficial:** *CIÊNCIA E SAÚDE PELA VIDA*
+> **Versão do documento:** 1.1 · **Base normativa:** Manual de Marca Fiocruz v1.1 · **Tagline oficial:** *CIÊNCIA E SAÚDE PELA VIDA*
+>
+> **Novidades da v1.1:** logo oficial extraído em vetor do manual (`assets/logo/`); contexto de marca para geração por IA (`brand.md`); ferramenta interativa **Fiocruz Brand Studio** (`brand-studio.html`) — ver §9.
 
 ---
 
@@ -141,6 +143,8 @@ svgo --multipass \
 - [ ] Cores como `currentColor` nos ícones monocromáticos (herança de tema).
 - [ ] Traço da versão **negativa** ≠ traço da versão **positiva** (arquivos separados).
 - [ ] `role="img"` + `<title>` para acessibilidade.
+
+> **Ativos entregues (`assets/logo/`):** a assinatura horizontal preferencial foi **extraída em vetor** do manual v1.1 (não redesenhada), respeitando a regra de ouro. Disponível como PNG transparente de alta resolução em duas versões — `fiocruz-horizontal-positivo.png` (fundos claros) e `fiocruz-horizontal-negativo.png` (fundos escuros). Para produção impressa, solicitar à CCS os masters vetoriais oficiais (EPS/PDF-X4). **A versão positiva não é a negativa invertida** — são arquivos distintos com pesos de traço distintos.
 
 ### 2.3 Nomenclatura de arquivos de marca
 
@@ -732,6 +736,41 @@ button-primary-bg-disabled
 
 ---
 
+## 9. Entregáveis do repositório & Fiocruz Brand Studio
+
+O sistema é entregue como um conjunto coeso de artefatos versionados. Todos derivam do manual v1.1 e compartilham os mesmos tokens.
+
+### 9.1 Mapa de entregáveis
+
+| Arquivo | O que é | Consumidor |
+|---|---|---|
+| `design.md` | Este documento técnico (fonte única de verdade) | Todos |
+| `brand.md` | Contexto de marca (brand, voice, intro, product context) para pipelines de IA | Geração assistida por IA |
+| `design-system.html` | Referência navegável do design system (paleta, tipografia, 3 modos, matriz WCAG) | Design + Eng |
+| `brand-studio.html` | **Ferramenta interativa** — ver §9.2 | Times de execução |
+| `tokens/**` | Design tokens W3C (DTCG) + config Style Dictionary | Engenharia |
+| `assets/logo/**` | Logo oficial extraído em vetor (positivo/negativo) | Todos |
+
+### 9.2 Fiocruz Brand Studio (`brand-studio.html`)
+
+Aplicação de página única, autossuficiente (fontes institucionais Barlow Semi Condensed + Open Sans e logo embutidos; sem dependências externas), que operacionaliza este manual em **nove ferramentas**:
+
+| Ferramenta | Função | Aterrissa em |
+|---|---|---|
+| **Marca & Logo** | Assinaturas positiva/negativa, downloads, especificações de grid/redução | §1, §2 |
+| **Combinação de fontes** | Pareamentos por contexto (Digital, Impresso, Divulgação, Editorial) com preview editável | §4.2, §4.4 |
+| **Combinação de cores** | Harmonias (complementar, análoga, tríade, split, tétrade, mono) com trava na paleta + check WCAG | §3.1, §3.4, §3.5 |
+| **Peça multiplataforma** | Uma peça renderizada em Instagram, Facebook, LinkedIn e site simultaneamente | §4.4.3 |
+| **Gerador de gráficos** | Dados colados → melhor visualização + descrição acessível (padrão PNAC) | §6.3, §7.2 |
+| **Dashboard** | KPIs + gráficos em painel único imprimível | §6.3 |
+| **Layouts de slides** | Biblioteca de páginas (pitch, relatório, institucional) | §4.4 |
+| **Simulador de daltonismo** | Protanopia, deuteranopia, tritanopia, acromatopsia sobre imagem enviada | §3.5, §6.3 |
+| **Descrição acessível** | Assistente guiado de `alt text` + descrição estendida + HTML pronto | §7.2 |
+
+> **Padrão de descrição acessível** (ferramentas de gráfico e de descrição): segue o modelo do relatório PNAC — enunciar o **tipo** de gráfico + a **variável** + os **valores** + a **base**. Ex.: *"Gráfico de barras mostrando cobertura vacinal por região: Norte 74%, Sudeste 89%, Sul 91%. Base: 1.008 respondentes."* Nunca depender só de cor: a paleta de data-viz (§6.3) é ordenada para contraste mútuo e validada contra daltonismo.
+
+---
+
 ## Apêndice A — Referência rápida de tokens críticos
 
 ```css
@@ -781,4 +820,4 @@ button-primary-bg-disabled
 
 ---
 
-*Documento técnico gerado como proposta de Design System & Brand System 360° para a Fiocruz, expandindo o Manual de Uso da Marca v1.1 (jul/2024) para contextos multiplataforma. Todos os valores cromáticos e tipográficos derivam do manual oficial; ratios de contraste calculados pela fórmula WCAG 2.x e verificados numericamente.*
+*Documento técnico gerado como proposta de Design System & Brand System 360° para a Fiocruz, expandindo o Manual de Uso da Marca v1.1 (jul/2024) para contextos multiplataforma. Todos os valores cromáticos e tipográficos derivam do manual oficial; ratios de contraste calculados pela fórmula WCAG 2.x e verificados numericamente. O padrão de descrição acessível (§7.2, §9.2) segue o modelo do Relatório PNAC 2025; os layouts de slides (§9.2) ampliam as apresentações institucionais de referência (SUS 35 Anos).*
