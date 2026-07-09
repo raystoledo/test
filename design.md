@@ -3,9 +3,10 @@
 > **Proposta técnica de Design System e Brand System multiplataforma para a Fundação Oswaldo Cruz.**
 > Otimização e expansão do *Manual de Uso da Marca Fiocruz* (v1.1 — Julho/2024) para os contextos Web, Digital, Redes Sociais e Impresso/Papelaria.
 >
-> **Versão do documento:** 1.1 · **Base normativa:** Manual de Marca Fiocruz v1.1 · **Tagline oficial:** *CIÊNCIA E SAÚDE PELA VIDA*
+> **Versão do documento:** 1.2 · **Base normativa:** Manual de Marca Fiocruz v1.1 · **Conformidade:** WCAG 2.2 (⊇ WCAG 2.1) · **Tagline oficial:** *CIÊNCIA E SAÚDE PELA VIDA*
 >
-> **Novidades da v1.1:** logo oficial extraído em vetor do manual (`assets/logo/`); contexto de marca para geração por IA (`brand.md`); ferramenta interativa **Fiocruz Brand Studio** (`brand-studio.html`) — ver §9.
+> **Novidades da v1.2:** Brand Studio ampliado para **15 ferramentas** (ícones, plantas/agroecologia, texturas, mapa do Brasil, guia de gráficos, verificador de contraste) e **4 modos de tema** (Manual, Claro, Escuro, Minimal) — ver §9.2.
+> **v1.1:** logo oficial extraído em vetor do manual (`assets/logo/`); contexto de marca para IA (`brand.md`); Brand Studio (`brand-studio.html`).
 
 ---
 
@@ -356,6 +357,8 @@ Regra do manual: sempre observar o contraste assinatura × fundo. Matriz operaci
 > **Como fazer (fundo fotográfico complexo):** aplicar um `scrim` — box semitransparente em cor da paleta (`rgba(18,41,42,.72)`) atrás da assinatura, respeitando a margem mínima de segurança nas laterais do grafismo.
 
 ### 3.5 Conformidade WCAG 2.2 — matriz de contraste verificada
+
+> **Sobre WCAG 2.1 (w3.org/TR/WCAG21):** este sistema tem como alvo a **WCAG 2.2**, que é um **superconjunto da 2.1** — todos os critérios de sucesso da 2.1 permanecem na 2.2, portanto conformar-se a este documento **implica conformidade com a WCAG 2.1**. A única exceção é o critério **4.1.1 Parsing** (2.1), tornado *obsoleto* na 2.2 por ser atendido de forma inerente por HTML válido; os critérios de contraste relevantes — **1.4.3 Contrast (Minimum)**, **1.4.6 Contrast (Enhanced)** e **1.4.11 Non-text Contrast** — são idênticos nas duas versões. A ferramenta *Verificador de contraste* do Brand Studio (§9.2) testa exatamente esses três critérios.
 
 Ratios calculados pela fórmula oficial (relative luminance, WCAG 2.x). Metas: **AA** ≥ 4,5:1 (texto normal) e ≥ 3:1 (texto grande ≥ 24px/18,66px-bold e componentes de UI / `1.4.11`); **AAA** ≥ 7:1 (normal) e ≥ 4,5:1 (grande).
 
@@ -753,21 +756,31 @@ O sistema é entregue como um conjunto coeso de artefatos versionados. Todos der
 
 ### 9.2 Fiocruz Brand Studio (`brand-studio.html`)
 
-Aplicação de página única, autossuficiente (fontes institucionais Barlow Semi Condensed + Open Sans e logo embutidos; sem dependências externas), que operacionaliza este manual em **nove ferramentas**:
+Aplicação de página única, autossuficiente (fontes institucionais Barlow Semi Condensed + Open Sans e logo embutidos; sem dependências externas), que operacionaliza este manual em **15 ferramentas**, agrupadas por finalidade:
 
-| Ferramenta | Função | Aterrissa em |
-|---|---|---|
-| **Marca & Logo** | Assinaturas positiva/negativa, downloads, especificações de grid/redução | §1, §2 |
-| **Combinação de fontes** | Pareamentos por contexto (Digital, Impresso, Divulgação, Editorial) com preview editável | §4.2, §4.4 |
-| **Combinação de cores** | Harmonias (complementar, análoga, tríade, split, tétrade, mono) com trava na paleta + check WCAG | §3.1, §3.4, §3.5 |
-| **Peça multiplataforma** | Uma peça renderizada em Instagram, Facebook, LinkedIn e site simultaneamente | §4.4.3 |
-| **Gerador de gráficos** | Dados colados → melhor visualização + descrição acessível (padrão PNAC) | §6.3, §7.2 |
-| **Dashboard** | KPIs + gráficos em painel único imprimível | §6.3 |
-| **Layouts de slides** | Biblioteca de páginas (pitch, relatório, institucional) | §4.4 |
-| **Simulador de daltonismo** | Protanopia, deuteranopia, tritanopia, acromatopsia sobre imagem enviada | §3.5, §6.3 |
-| **Descrição acessível** | Assistente guiado de `alt text` + descrição estendida + HTML pronto | §7.2 |
+| Ferramenta | Grupo | Função | Aterrissa em |
+|---|---|---|---|
+| **Marca & Logo** | Identidade | Assinaturas positiva/negativa, downloads, specs de grid/redução | §1, §2 |
+| **Combinação de fontes** | Criação | Pareamentos por contexto (Digital, Impresso, Divulgação, Editorial), preview editável | §4.2, §4.4 |
+| **Combinação de cores** | Criação | Harmonias (complementar, análoga, tríade, split, tétrade, mono) + trava na paleta + WCAG | §3.1, §3.4, §3.5 |
+| **Peça multiplataforma** | Criação | Uma peça em Instagram, Facebook, LinkedIn e site simultaneamente | §4.4.3 |
+| **Gerador de ícones** | Criação | Sistema de ícones no traço Fiocruz; busca + famílias (contorno/duotom/preenchido); SVG | §2.4 |
+| **Plantas · agroecologia** | Criação | Gerador paramétrico de plantas em vetor (L-system) no estilo de linha; coleção; SVG | §2.4 |
+| **Gerador de texturas** | Criação | Texturas procedurais (topográfico/ondas/pontos/orgânico/hachura) nas cores da marca; PNG | §2.4 |
+| **Guia de gráficos** | Dados | Decisão por objetivo (à la data-to-viz) → recomenda o formato e abre o gerador | §6.3 |
+| **Gerador de gráficos** | Dados | Dados colados → melhor visualização + descrição acessível (padrão PNAC) | §6.3, §7.2 |
+| **Mapa do Brasil** | Dados | Coroplético dos 27 estados; planeja cores (sequencial/categórica) da marca; legenda | §3.4, §6.3 |
+| **Dashboard** | Dados | KPIs + gráficos em painel único imprimível | §6.3 |
+| **Layouts de slides** | Dados | Biblioteca de páginas (pitch, relatório, institucional) | §4.4 |
+| **Verificador de contraste** | Acessibilidade | Par de cores → WCAG 2.1 (1.4.3 / 1.4.6 / 1.4.11) + sugestão de cor da marca | §3.5 |
+| **Simulador de daltonismo** | Acessibilidade | Protanopia, deuteranopia, tritanopia, acromatopsia sobre imagem enviada | §3.5, §6.3 |
+| **Descrição acessível** | Acessibilidade | Assistente guiado de `alt text` + descrição estendida + HTML pronto | §7.2 |
+
+**Modos de tema (4):** o Studio demonstra ao vivo os temas do sistema — **Manual** (fiel ao manual: branco/preto, cor institucional só em botões e links), **Claro**, **Escuro** e **Minimal** (dark neutro frio com cor de marca só como *accent* — o modelo Dark Core, §3.3).
 
 > **Padrão de descrição acessível** (ferramentas de gráfico e de descrição): segue o modelo do relatório PNAC — enunciar o **tipo** de gráfico + a **variável** + os **valores** + a **base**. Ex.: *"Gráfico de barras mostrando cobertura vacinal por região: Norte 74%, Sudeste 89%, Sul 91%. Base: 1.008 respondentes."* Nunca depender só de cor: a paleta de data-viz (§6.3) é ordenada para contraste mútuo e validada contra daltonismo.
+
+> **Sobre os "geradores de IA" (ícones, plantas, texturas):** nesta entrega são **motores procedurais/paramétricos** — determinísticos, executam offline no navegador e produzem vetores/PNG reais no estilo da marca. A geração *texto→vetor* por modelo de IA (a partir do nome livre de uma planta ou de uma ideia de ícone) exige um **backend** com modelo generativo; a arquitetura já prevê esse ponto de extensão (o campo de texto e a busca por palavra-chave são o mesmo *entry point*).
 
 ---
 
